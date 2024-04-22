@@ -28,7 +28,6 @@ class ProfileFragment : Fragment() {
         btnGithub.setOnClickListener {
             val webpage = Uri.parse("https://enka.network/hsr/804321508/")
             val intent = Intent(Intent.ACTION_VIEW, webpage)
-            startActivity(intent)
         }
 
 //        val textView: TextView = binding.textNotifications

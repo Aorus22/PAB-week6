@@ -2,11 +2,14 @@
 package com.example.ppab_06_l0122018_alyzakhoirunnadif
 
 import android.content.Intent
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.ppab_06_l0122018.Items
 
@@ -30,10 +33,12 @@ class ListAdapter(private val listCharacter: ArrayList<Items>) : RecyclerView.Ad
         holder.imgPhoto.setImageResource(img)
         holder.tvName.text = name
         holder.tvDescription.text = desc
-//        holder.itemView.setOnClickListener {
-//            val intent = Intent(holder.itemView.context, DetailCharacter::class.java)
-//            intent.putExtra("CHAR", Character(name, desc, img))
-//            holder.itemView.context.startActivity(intent)
-//        }
+        holder.itemView.setOnClickListener {
+            val character = Items(name, desc, img)
+            val mBundle = Bundle()
+            mBundle.putParcelable("CHARACTER", character)
+            it.findNavController().navigate(R.id.action_navigation_list_to_navigation_detail_item, mBundle)
+        }
+
     }
 }

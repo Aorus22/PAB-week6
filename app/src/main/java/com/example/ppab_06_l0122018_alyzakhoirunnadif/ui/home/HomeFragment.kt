@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigation
+import com.example.ppab_06_l0122018_alyzakhoirunnadif.R
 import com.example.ppab_06_l0122018_alyzakhoirunnadif.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
@@ -28,6 +30,9 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
+        binding.btnGoToCharacters.setOnClickListener(
+            Navigation.createNavigateOnClickListener(R.id.action_navigation_home_to_navigation_list)
+        )
 //        val textView: TextView = binding.textHome
 //        homeViewModel.text.observe(viewLifecycleOwner) {
 //            textView.text = it
