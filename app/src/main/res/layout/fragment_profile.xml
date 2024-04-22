@@ -23,7 +23,7 @@
         android:textSize="20sp"
         android:textStyle="bold"
         android:id="@+id/data_nim"
-        android:text="@string/nim"/>
+        android:text="@string/uid"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -43,14 +43,14 @@
         android:textSize="20sp"
         android:textStyle="bold"
         android:id="@+id/data_jurusan_angkatan"
-        android:text="@string/jurusan"/>
+        android:text="@string/Tlevel"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:gravity="center"
-        android:text="@string/deskripsi_diri"
+        android:text="@string/Elevel"
         android:textSize="20sp"
         android:textStyle="bold" />
 
@@ -67,10 +67,10 @@
         android:text="@string/data_deskripsi"/>
 
     <Button
-        android:id="@+id/btn_Share"
+        android:id="@+id/btn_go_to_web"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:text="@string/share"
+        android:text="@string/go_to_web_profile"
         android:layout_marginStart="56dp"
         android:layout_marginEnd="56dp"
         android:layout_marginBottom="8dp"
