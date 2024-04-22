@@ -1,15 +1,9 @@
-package com.example.ppab_06_l0122018_alyzakhoirunnadif.ui.dashboard
+package com.example.ppab_06_l0122018_alyzakhoirunnadif.ui.list
 
-import android.graphics.Typeface
 import android.os.Bundle
-import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.ActionBar
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
@@ -19,13 +13,13 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.ppab_06_l0122018.Items
 import com.example.ppab_06_l0122018_alyzakhoirunnadif.ListAdapter
 import com.example.ppab_06_l0122018_alyzakhoirunnadif.R
-import com.example.ppab_06_l0122018_alyzakhoirunnadif.databinding.FragmentDashboardBinding
+import com.example.ppab_06_l0122018_alyzakhoirunnadif.databinding.FragmentListBinding
 
-class DashboardFragment : Fragment() {
+class ListFragment : Fragment() {
 
     private lateinit var rvChars: RecyclerView
     private val list = ArrayList<Items>()
-    private var _binding: FragmentDashboardBinding? = null
+    private var _binding: FragmentListBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -39,7 +33,7 @@ class DashboardFragment : Fragment() {
         val dashboardViewModel =
             ViewModelProvider(this).get(DashboardViewModel::class.java)
 
-        _binding = FragmentDashboardBinding.inflate(inflater, container, false)
+        _binding = FragmentListBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
 //        val textView: TextView = binding.textDashboard
